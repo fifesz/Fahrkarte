@@ -10,4 +10,13 @@ public class Mehrfahrtenkarte extends Fahrkarte {
         s += " (" + anzahlFahrten + "Fahrten frei)";
         return s;
     }
+    public boolean nutzen ()
+    {
+        if (istGueltig())
+        {
+            entwerten();
+            return true;
+        }
+        else return false;
+    }
 }

@@ -10,4 +10,11 @@ public class Einzelfahrkarte extends Fahrkarte {
         if (!istGueltig ()) s += " (entwertet=";
         return s;
     }
+    public boolean nutzen (){
+        if (istGueltig ()){
+            entwerten ();
+            return true;
+        }
+        else return false;
+    }
 }

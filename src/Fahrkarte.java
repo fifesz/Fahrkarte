@@ -1,4 +1,4 @@
-public class Fahrkarte{
+abstract public class Fahrkarte{
     private double preis;
     private boolean gueltig;
 
@@ -21,4 +21,5 @@ public class Fahrkarte{
     public String toString(){
         return "Fahrpreis: " + preis + " Euro";
     }
+    abstract boolean nutzen ();
     }
