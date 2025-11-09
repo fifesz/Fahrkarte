@@ -1,4 +1,4 @@
-public class Mehrfahrtenkarte extends Fahrkarte {
+public class Mehrfahrtenkarte extends Fahrkarte implements Rueckfahrt {
     private int anzahlFahrten;
 
     public Mehrfahrtenkarte (double preis, int anzahlFahrkarten){
@@ -15,6 +15,15 @@ public class Mehrfahrtenkarte extends Fahrkarte {
         if (istGueltig())
         {
             entwerten();
+            return true;
+        }
+        else return false;
+    }
+    public boolean nutzen (boolean mitRueckfahrt){
+        if (!mitRueckfahrt) return nutzen();
+        else if (anzahlFahrten >= 2){
+            nutzen();
+            nutzen();
             return true;
         }
         else return false;
