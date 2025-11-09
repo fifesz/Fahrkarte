@@ -5,4 +5,9 @@ public class Mehrfahrtenkarte extends Fahrkarte {
         super (preis);
         this.anzahlFahrten = anzahlFahrten;
     }
+    public String toString (){
+        String s = super.toString ();
+        s += " (" + anzahlFahrten + "Fahrten frei)";
+        return s;
+    }
 }
